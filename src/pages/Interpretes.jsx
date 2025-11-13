@@ -1,5 +1,10 @@
+import Contenedor from "../components/Grid.jsx";
+import Interprete from "../components/InterpreteAccesible.jsx";
+import peliculas from "../data/peliculas";
+
 function Interpretes() {
   return (
+    <>
     <Contenedor titulo="Intérpretes de películas destacadas">
       {/* <h1 className="font-heading-h1 leading-(--heading-h1-line-height) text-(--colorprimary) [text-shadow:0px_4px_4px_#00000040]"> */}
       {/* <h1 className="h1__sqlito [text-shadow:0px_4px_4px_#00000040]"> */}
@@ -57,5 +62,6 @@ function Interpretes() {
           )}
       </div>
     </Contenedor>
+    </>
   );
 }

@@ -1,6 +1,10 @@
+import Nav from './nav.jsx';
+
 function Header() {
 return(
-    <header>
+    <Header>
         <Nav />
-    </header>
+    </Header>
 )}
+
+export default Header;
