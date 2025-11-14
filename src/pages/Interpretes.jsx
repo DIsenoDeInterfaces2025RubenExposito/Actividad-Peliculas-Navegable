@@ -25,7 +25,6 @@ function Interpretes() {
         </main>
       </Contenedor>
     </>
-  );
-}
+  )}
 
 export default Interpretes;

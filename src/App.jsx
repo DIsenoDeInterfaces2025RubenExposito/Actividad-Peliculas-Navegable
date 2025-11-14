@@ -7,6 +7,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
 import Interpretes from "./pages/Interpretes.jsx";
+import Peliculas from "./pages/Peliculas.jsx";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Inicio" element={<Navigate to="/" />} />
           <Route path="/Interpretes" element={<Interpretes />} />
-          {/* <Route path="/Peliculas" element={<Peliculas />} />
-          <Route path="/admin" element={<Admin />} /> */}
+          <Route path="/Peliculas" element={<Peliculas />} />
+          {/* <Route path="/admin" element={<Admin />} /> */}
           <Route />
 
           <Route
