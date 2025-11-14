@@ -17,17 +17,17 @@
        -------------
     */
     /* Brand Colors */
-    --colorprimary: rgba(91, 39, 125, 1);
-    --colorsecondary: rgba(234, 220, 244, 1);
+    --colorprimary:  rgba(0, 77, 64, 1);
+    --colorsecondary: rgba(235, 240, 225, 1);
     /* State Colors */
-    --colorinfo: rgba(47, 128, 237, 1);
-    --colorsuccess: rgba(39, 174, 96, 1);
-    --colorwarning: rgba(226, 185, 59, 1);
-    --colorerror: rgba(235, 87, 87, 1);
+    --colorinfo: rgba(33, 150, 243, 1);
+    --colorsuccess: rgba(76, 175, 80, 1);
+    --colorwarning: rgba(255, 152, 0, 1);
+    --colorerror: rgba(229, 57, 53, 1);
     /* Black colors */
     --colorblack-1: rgba(0, 0, 0, 1);
-    --colorblack-2: rgba(29, 29, 29, 1);
-    --colorblack-3: rgba(40, 40, 40, 1);
+    --colorblack-2: rgba(33, 33, 33, 1);
+    --colorblack-3:  rgba(66, 66, 66, 1);
     --colorwhite: rgba(255, 255, 255, 1);
     /* Grey colors */
     --colorgrey-1: rgba(51, 51, 51, 1);
@@ -37,7 +37,7 @@
     --colorgrey-5: rgba(224, 224, 224, 1);
 
     --colorhover: rgba(138, 184, 51, 1);
-    --dropshadow: 0px 4px 24px 0px rgba(9, 44, 76, 0.4);
+    --dropshadow:  0px 4px 24px 0px rgba(9, 44, 76, 0.4);
     
 
     /* -------------
