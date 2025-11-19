@@ -1,30 +1,17 @@
-import { Link } from "react-router-dom";
+// Nav.jsx
+
+// Asegúrate de que tu archivo se llame 'DesktopNav.jsx' o ajusta la importación.
+import DesktopNav from './DescktopNav'; 
+import BurgerNav from './BurgerNav'; 
+import useScreenSize from './useScreenSize'; // El hook que determina si estamos en móvil
 
 function Nav() {
+  const isMobile = useScreenSize(768); // Usamos 768px como el punto de quiebre
+
   return (
-    <nav className="navbar">
-      <ul className="navbar__list">
-        <li className="navbar__item">
-          <Link to="/" className="navbar__link">
-            Inicio
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link to="/Peliculas" className="navbar__link">
-            Películas
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link to="/Interpretes" className="navbar__link">
-            Intérpretes
-          </Link>
-        </li>
-        <li className="navbar__item">
-          <Link to="/admin" className="navbar__link">
-            Admin
-          </Link>
-        </li>
-      </ul>
+    // Renderizado condicional
+    <nav>
+      {isMobile ? <BurgerNav /> : <DesktopNav />}
     </nav>
   );
 }
