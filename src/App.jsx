@@ -1,5 +1,5 @@
 // import Interprete from "./components/Interprete";
-import Interprete from "./components/InterpreteAccesible";
+import Interprete from "./components/Interprete.jsx";
 import peliculas from "./data/peliculas";
 
 import Contenedor from "./components/Grid.jsx";
@@ -8,6 +8,7 @@ import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
 import Interpretes from "./pages/Interpretes.jsx";
 import Peliculas from "./pages/Peliculas.jsx";
+import PeliculaCard from "./components/PeliculaCard.jsx";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/Inicio" element={<Navigate to="/" />} />
           <Route path="/Interpretes" element={<Interpretes />} />
           <Route path="/Peliculas" element={<Peliculas />} />
+          <Route path="/Interprete/:index" element={<Interprete />} />
+          <Route path="/PeliculaCard/:id" element={<PeliculaCard />} />
           {/* <Route path="/admin" element={<Admin />} /> */}
           <Route />
 

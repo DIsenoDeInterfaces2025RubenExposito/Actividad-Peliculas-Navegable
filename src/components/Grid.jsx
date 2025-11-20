@@ -26,7 +26,7 @@ function Contenedor({ children, titulo }) {
         )}
 
         {children}
-        <Outlet/>
+        <Outlet />
       </section>
     </main>
   );

@@ -1,18 +1,13 @@
-// Nav.jsx
-
-// Asegúrate de que tu archivo se llame 'DesktopNav.jsx' o ajusta la importación.
-import DesktopNav from './DescktopNav'; 
-import BurgerNav from './BurgerNav'; 
-import useScreenSize from './useScreenSize'; // El hook que determina si estamos en móvil
+import DesktopNav from "./DescktopNav";
+import BurgerNav from "./BurgerNav";
+import useScreenSize from "../hooks/useScreenSize"; // El hook que determina si estamos en móvil
 
 function Nav() {
-  const isMobile = useScreenSize(768); // Usamos 768px como el punto de quiebre
+  const isMobile = useScreenSize(768);
 
   return (
-    // Renderizado condicional
-    <nav>
-      {isMobile ? <BurgerNav /> : <DesktopNav />}
-    </nav>
+    // Eleccion entre Nav de escritorio o Nav hamburguesa según el tamaño de pantalla
+    <nav>{isMobile ? <BurgerNav /> : <DesktopNav />}</nav>
   );
 }
 

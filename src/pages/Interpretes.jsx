@@ -12,6 +12,7 @@ function Interpretes() {
             // .filter(pelicula => pelicula.clasificacion === "Drama") // solo películas de Drama
             .map((pelicula) =>
               pelicula.actores.map((actor, index) => (
+                <Link to={`/Interpretes/${index}`} >
                 <Interprete
                   key={index}
                   nombre={actor.nombre}
@@ -20,6 +21,7 @@ function Interpretes() {
                 >
                   {actor.biografia}
                 </Interprete>
+                </Link>
               ))
             )}
         </main>

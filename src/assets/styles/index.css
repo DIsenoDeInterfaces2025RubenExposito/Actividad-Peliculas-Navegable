@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./theme.css";
 
-/** Metodología BEM
+/*  * Metodología BEM
  * 
  * Sintaxis:
  * .bloque__elemento--modificador
@@ -231,4 +231,97 @@
 
 .pelicula-card .text-colorprimary {
   color: var(--colorprimary);
+}
+
+/* Estilos para el menú hamburguesa */
+.burger-nav-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: var(--colorprimary);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-btn:hover {
+  background-color: rgba(91, 39, 125, 0.1);
+  transform: scale(1.1);
+}
+
+.burger-btn:focus {
+  outline: 2px solid var(--colorhover);
+  outline-offset: 2px;
+}
+
+.burger-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.burger-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--colorwhite);
+  border: 1px solid var(--colorgrey-5);
+  border-radius: 4px;
+  min-width: 200px;
+  flex-direction: column;
+  gap: 0;
+  display: none;
+  box-shadow: var(--dropshadow);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.burger-menu--open {
+  display: flex;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.burger-link {
+  display: block;
+  padding: 1rem;
+  color: var(--colorprimary);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--colorgrey-5);
+  transition: all 0.2s ease;
+}
+
+.burger-link:last-child {
+  border-bottom: none;
+}
+
+.burger-link:hover {
+  background-color: rgba(91, 39, 125, 0.1);
+  padding-left: 1.5rem;
+}
+
+.burger-link.active {
+  background-color: rgba(91, 39, 125, 0.2);
+  border-left: 3px solid var(--colorprimary);
 }

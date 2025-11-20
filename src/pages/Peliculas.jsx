@@ -8,7 +8,9 @@ export default function Peliculas() {
       <p className="body-text">Catálogo de películas disponibles:</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-8">
         {peliculas.map((pelicula) => (
+          <Link to={/PeliculaCard/$(pelicula.id)}>
           <PeliculaCard key={pelicula.id} pelicula={pelicula} />
+          </Link>
         ))}
       </div>
     </Contenedor>

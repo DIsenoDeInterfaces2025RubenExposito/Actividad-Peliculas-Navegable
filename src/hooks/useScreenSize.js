@@ -1,4 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; 
+/*
+  Recordatorio: useScreenSize hook sacado mediante IA que en este caso abarca un breakpoint para móvil
+  tambien puedo usar MediaQuerys para hacerlo https://usehooks.com/useMedia/ o directamente en CSS 
+  (generalmente es mejor usar CSS para temas de diseño) pero como ya esta hecho de momento uso este.
+  */
 
 function useScreenSize(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
