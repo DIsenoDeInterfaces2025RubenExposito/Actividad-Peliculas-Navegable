@@ -325,3 +325,330 @@
   background-color: rgba(91, 39, 125, 0.2);
   border-left: 3px solid var(--colorprimary);
 }
+
+/* Estilos para página de detalles del intérprete */
+.interprete-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 200px);
+}
+
+.interprete-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+  background: linear-gradient(135deg, var(--colorwhite) 0%, rgba(234, 220, 244, 0.3) 100%);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(91, 39, 125, 0.15);
+  border: 1px solid rgba(91, 39, 125, 0.1);
+}
+
+@media (max-width: 768px) {
+  .interprete-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+.interprete-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(91, 39, 125, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.interprete-image:hover {
+  transform: scale(1.02);
+}
+
+.interprete-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.interprete-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.interprete-nombre {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--colorprimary);
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.interprete-birth {
+  font-size: 1rem;
+  color: var(--colorgrey-2);
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(91, 39, 125, 0.08) 0%, rgba(91, 39, 125, 0.03) 100%);
+  border-radius: 8px;
+  border-left: 4px solid var(--colorprimary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.interprete-birth strong {
+  color: var(--colorprimary);
+  font-weight: 600;
+}
+
+.interprete-biografia {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--colorgrey-1);
+  margin: 0;
+  text-align: justify;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.interprete-pelicula {
+  font-size: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--colorsecondary) 0%, rgba(234, 220, 244, 0.7) 100%);
+  border-radius: 8px;
+  color: var(--colorprimary);
+  margin: 0;
+  font-weight: 600;
+  border-left: 4px solid var(--colorprimary);
+}
+
+.interprete-pelicula strong {
+  color: var(--colorprimary);
+}
+
+.interprete-error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--colorprimary);
+  background: rgba(235, 87, 87, 0.1);
+  border-radius: 8px;
+  margin: 2rem;
+}
+
+.interprete-error h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.interprete-error p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.interprete-btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--colorprimary) 0%, #7a3d99 100%);
+  color: var(--colorwhite);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(91, 39, 125, 0.25);
+}
+
+.interprete-btn-volver:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 39, 125, 0.35);
+}
+
+.interprete-btn-volver:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(91, 39, 125, 0.2);
+}
+
+.interprete-btn-volver:focus {
+  outline: 2px solid var(--colorhover);
+  outline-offset: 2px;
+}
+
+/* Estilos para PeliculaDescription */
+.pelicula-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 200px);
+}
+
+.pelicula-card-detail {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+  background: linear-gradient(135deg, var(--colorwhite) 0%, rgba(234, 220, 244, 0.3) 100%);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(91, 39, 125, 0.15);
+  border: 1px solid rgba(91, 39, 125, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pelicula-card-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+.pelicula-card-detail figure {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(91, 39, 125, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.pelicula-card-detail figure:hover {
+  transform: scale(1.02);
+}
+
+.pelicula-card-detail figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pelicula-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pelicula-nombre {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--colorprimary);
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pelicula-director,
+.pelicula-clasificacion,
+.pelicula-recaudacion,
+.pelicula-nota {
+  font-size: 1rem;
+  color: var(--colorgrey-2);
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(91, 39, 125, 0.08) 0%, rgba(91, 39, 125, 0.03) 100%);
+  border-radius: 8px;
+  border-left: 4px solid var(--colorprimary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.pelicula-director strong,
+.pelicula-clasificacion strong,
+.pelicula-recaudacion strong,
+.pelicula-nota strong {
+  color: var(--colorprimary);
+  font-weight: 600;
+}
+
+.pelicula-resumen {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--colorgrey-1);
+  margin: 0;
+  text-align: justify;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.pelicula-actores {
+  font-size: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--colorsecondary) 0%, rgba(234, 220, 244, 0.7) 100%);
+  border-radius: 8px;
+  color: var(--colorprimary);
+  margin: 0;
+  font-weight: 600;
+  border-left: 4px solid var(--colorprimary);
+}
+
+.pelicula-actores h3 {
+  margin: 0 0 1rem 0;
+  color: var(--colorprimary);
+}
+
+.pelicula-actores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pelicula-actores li {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--colorprimary);
+  font-weight: 500;
+}
+
+.pelicula-actores li:hover {
+  background: var(--colorwhite);
+  transform: translateX(0.5rem);
+  box-shadow: 0 2px 8px rgba(91, 39, 125, 0.15);
+}
+
+.pelicula-btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--colorprimary) 0%, #7a3d99 100%);
+  color: var(--colorwhite);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(91, 39, 125, 0.25);
+}
+
+.pelicula-btn-volver:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 39, 125, 0.35);
+}
+
+.pelicula-btn-volver:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(91, 39, 125, 0.2);
+}
+
+.pelicula-btn-volver:focus {
+  outline: 2px solid var(--colorhover);
+  outline-offset: 2px;
+}
+

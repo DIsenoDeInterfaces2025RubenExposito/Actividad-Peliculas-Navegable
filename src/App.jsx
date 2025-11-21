@@ -9,6 +9,8 @@ import Home from "./pages/Home.jsx";
 import Interpretes from "./pages/Interpretes.jsx";
 import Peliculas from "./pages/Peliculas.jsx";
 import PeliculaCard from "./components/PeliculaCard.jsx";
+import InterpreteDescription from "./pages/InterpreteDescription.jsx";
+import PeliculaDescription from "./pages/PeliculaDescription.jsx";
 
 function App() {
   return (
@@ -21,8 +23,8 @@ function App() {
           <Route path="/Inicio" element={<Navigate to="/" />} />
           <Route path="/Interpretes" element={<Interpretes />} />
           <Route path="/Peliculas" element={<Peliculas />} />
-          <Route path="/Interprete/:index" element={<Interprete />} />
-          <Route path="/PeliculaCard/:id" element={<PeliculaCard />} />
+          <Route path="/Interpretes/:peli/:index" element={<InterpreteDescription />} />
+          <Route path="/Peliculas/:id" element={<PeliculaDescription/>} />
           {/* <Route path="/admin" element={<Admin />} /> */}
           <Route />
 

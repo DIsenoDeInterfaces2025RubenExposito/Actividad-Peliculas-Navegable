@@ -1,8 +1,9 @@
 import Contenedor from "../components/Grid.jsx";
-import Interprete from "../components/InterpreteAccesible.jsx";
+import Interprete from "../components/Interprete.jsx";
 import peliculas from "../data/peliculas";
+import { Link } from "react-router-dom";
 
-function Interpretes() {
+export default function Interpretes() {
   return (
     <>
       <Contenedor titulo="Intérpretes de películas destacadas">
@@ -12,7 +13,7 @@ function Interpretes() {
             // .filter(pelicula => pelicula.clasificacion === "Drama") // solo películas de Drama
             .map((pelicula) =>
               pelicula.actores.map((actor, index) => (
-                <Link to={`/Interpretes/${index}`} >
+                <Link to={`/Interpretes/${pelicula.id}/${index}`} >
                 <Interprete
                   key={index}
                   nombre={actor.nombre}
@@ -28,5 +29,4 @@ function Interpretes() {
       </Contenedor>
     </>
   )}
-
-export default Interpretes;
+  
